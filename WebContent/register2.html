@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Simple register</title>
+</head>
+<body>
+	<h2>Register Here !</h2>
+	<table>
+		<tr>
+			<td></td>
+			<td><p id="vNama" style="color: red; display: none;">Masukkan
+					Nama !</p></td>
+		</tr>
+		<tr>
+			<td>Nama</td>
+			<td><input type="text" id="nama" /></td>
+
+		</tr>
+		<tr>
+			<td>Alamat</td>
+			<td><textarea rows="3" cols="15" id="alamat"></textarea></td>
+			<td><p id="vAlamat" style="color: red; display: none;">Masukkan
+					Alamat !</p></td>
+		</tr>
+		<tr>
+			<td>Usia</td>
+			<td><input type="text" id="usia" /></td>
+			<td><p id="vUsia" style="color: red; display: none;">Masukkan
+					Usia !</p></td>
+		</tr>
+		<tr>
+			<td>Gelar</td>
+			<td><input type="text" id="gelar" /></td>
+			<td><p id="vGelar" style="color: red; display: none;">Masukkan
+					Gelar !</p></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="button" onclick="validasi();"
+				id="btn-submit-reg" value="Submit" /></td>
+		</tr>
+	</table>
+</body>
+<script type="text/javascript">
+	// elemen input
+	var nama = document.getElementById("nama");
+	var alamat = document.getElementById("alamat");
+	var usia = document.getElementById("usia");
+	var gelar = document.getElementById("gelar");
+
+	// red text
+	var vNama = document.getElementById("vNama");
+	var vAlamat = document.getElementById("vAlamat");
+	var vUsia = document.getElementById("vUsia");
+	var vGelar = document.getElementById("vGelar");
+
+	// condition
+	function validasi() {
+		if (nama.value == "") {
+			vNama.style.display = "block";
+		} else {
+			vNama.style.display = "none";
+		}
+
+		if (alamat.value == "") {
+			vAlamat.style.display = "block";
+		} else {
+			vAlamat.style.display = "none";
+		}
+
+		if (usia.value == "") {
+			vUsia.style.display = "block";
+		} else {
+			vUsia.style.display = "none";
+		}
+
+		if (gelar.value == "") {
+			vGelar.style.display = "block";
+		} else {
+			vGelar.style.display = "none";
+		}
+	}
+</script>
+</html>

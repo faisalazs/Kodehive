@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+.stylebtn {
+    margin-left: 52%;
+    color: red;
+    background-color: black;
+}
+.triangle {
+	width: 0;
+	height: 0;
+	margin-left: 50%;
+	border-left: 80px solid transparent;
+	border-right: 80px solid transparent;
+	border-bottom: 80px solid cyan;
+    background-color: blue;
+}
+
+.triangle-bawah {
+	width: 0;
+	height: 0;
+	margin-left: 50%;
+	border-left: 80px solid transparent;
+	border-right: 80px solid transparent;
+	border-top: 80px solid lime;
+	background-color: yellow;
+}
+
+.space {
+	margin-top: 50px;
+}
+</style>
+</head>
+<body>
+    <input class="stylebtn" id = "addWarna" type="button"  value="Beri Warna" />
+    <div class="space" style="background-color: transparent;"></div>
+	<div class="triangle"></div>
+    <div class="space" style="background-color: transparent;"></div>
+    <div id = "bawah1" class="triangle-bawah"></div> 
+    <div class="space" style="background-color: transparent;"></div>
+    <div class="triangle-bawah"></div> 
+
+</body>
+<script src="Jquery/static/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+    
+function settElement() {
+    $("#bawah1").css('background-color','brown')
+}
+
+$(document).ready(function () {
+    settElement()
+  
+    
+})
+    </script>
+</html>

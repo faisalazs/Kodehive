@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    /* div {
+        color: aquamarine;
+        padding: 20px 25px;
+        height: 120px;
+        width: 120px;
+        background-color: blue;
+    } */
+
+    .triangle {
+    width: 0;
+    height: 0;
+    
+    border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-bottom: 80px solid red;
+    }
+    .triangle-bawah {
+    width: 0;
+    height: 0;
+    
+    border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-top: 80px solid red;
+    }
+
+    .space { margin-top: 50px; }
+</style>
+</head>
+<body>
+    <div>Persegi 1</div><br>
+    <div>Persegi 2</div><br>
+    <div>Persegi 3</div><br>
+    <div class="triangle"></div><br>
+    <div class="space" style="background-color: transparent;"></div>
+    <span class="triangle"></span><br>
+    <div class="space" style="background-color: transparent;"></div>
+    <span class="triangle-bawah"></span> <br><br>
+
+
+<hr class="space">
+
+</body>
+<script src="../static/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+    
+    // Jquery DOM
+    function eventTriangle() {
+        $('div').on('click', function () {
+            $(this).text('Ini bangun segitiga')
+        })
+    }
+    
+    function settElement() {
+        $('div:first').css('background-color','red')
+    }
+
+    $(document).ready(function () {
+        settElement()
+        eventTriangle()
+    })
+</script>
+</html>

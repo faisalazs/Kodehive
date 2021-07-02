@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        .buggy{
+            color: aquamarine;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="p1" title="Paragraf 1">Ini adalah Paragraf 1</p>
+    <div id="target"></div>
+
+
+
+
+</body>
+
+<script src="../static/jquery-3.6.0.min.js"></script>
+
+<script type="text/javascript">
+
+    function addText() {
+        var tampungAttribute = $('p').attr('title')
+        $('#target').text(tampungAttribute)
+    }
+
+    function JqueryAttr1() {
+        $('#p1').attr('title', 'Paragraf Baru')
+    }
+
+    function addClass() {
+        $('#p1').addClass("buggy")
+    }
+
+    function removeClass() {
+        $('#p1').removeClass("buggy")
+    }
+
+    $(document).ready(function () {
+        JqueryAttr1()
+        addText()
+        addClass()
+        removeClass()
+    });
+</script>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>HTML & JS</title>
+</head>
+<body>
+
+	<button onclick="eventJS();">Alert</button>
+
+	<input type="button" onclick="Book('Charlie Wade', 90000, 2005);"
+		value="Book">
+
+	<input type="button" onclick="returnFunc();" value="return" />
+
+	<div style="padding-top: 25px;">
+		<form onsubmit="return eventOnSubmit();">
+			<input type="submit" value="OnSubmit" />
+		</form>
+	</div>
+
+	<input type="button" onclick="perhitungan1(2000, 1003);"
+		value="Book">
+	
+
+</body>
+
+<!-- call external JS -->
+<script src="resources\js\logic.js"></script>
+
+<script type="text/javascript">
+	function eventJS() {
+		alert("Belajar HTML & Javascript");
+	}
+
+	function Book(judul, harga, tahun) {
+		document.write("Judul Buku :" + judul + "<br />" + "Price " + harga
+				+ "<br />" + "Tahun : " + tahun)
+	}
+
+	function returnState(data1, data2) {
+		var hasil;
+		hasil = data1 / data2;
+
+		return hasil;
+	}
+
+	function returnFunc() {
+		var hasil
+		hasil = 90 * returnState(20, 21);
+		document.write(hasil);
+	}
+	
+	/* onsubmit event */
+	function eventOnSubmit() {
+		document.write("Yes Klik Me")
+	}
+</script>
+
+
+
+</html>

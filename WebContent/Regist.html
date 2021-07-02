@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registrasi</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+</head>
+<body style="margin-left: 30px;">
+
+	<h4 style="color: gray">Login</h4>
+	<hr>
+	<table>
+		<tr>
+			<td></td>
+			<td><small id="vNama" style="color: red; display: none;">Field
+					Ini Harus Diisi!</small></td>
+		</tr>
+		<tr>
+			<td>Nama</td>
+			<td><input type="text" id="nama" /></td>
+
+		</tr>
+		<tr>
+			<td></td>
+			<td><small><small style="color: gray">Username yang anda inginkan (hanya dapat terdiri dari huruf, angka dan _ ) Username tidak boleh mengandung spasi</small></small></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><small id="vPassword" style="color: red; display: none;">Field
+					Ini Harus Diisi!</small></td>
+		</tr>
+		<tr>
+			<td>Password</td>
+			<td><input type="password" id="password" /></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><small><small style="color: gray">Masukkan Password. Password minimal terdiri dari 6 karakter dan case sensitive (A beda dengan a)</small></small></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><small id="vUlangiPassword"
+				style="color: red; display: none;">Field Ini Harus Diisi!</small></td>
+		</tr>
+		<tr>
+			<td>Ulangi Password</td>
+			<td><input type="password" id="ulangipassword" /></td>
+		</tr>
+	</table>
+	<br>
+	<h4 style="color: gray">Identitas</h4>
+	<hr>
+	<table>
+		<tr>
+			<td></td>
+			<td><small id="vNamaIdentitas"
+				style="color: red; display: none;">Nama diisi sesuai identitas! </small></td>
+		</tr>
+		<tr>
+			<td>Nama sesuai identitas</td>
+			<td><input type="text" id="namaidentitas" /></td>
+
+		</tr>
+		<tr>
+			<td></td>
+			<td><small><small style="color: gray">Nama sesuai yg tertulis di kartu identitas, tanpa gelar akademis/sertifikasi</small></small></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><small><small style="color: gray">Nama diawali huruf besar di awal dan setelah spasi, contoh benar: Abc Def, contoh salah: abc def, ABC DEF</small></small></td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td><small id="vNamaIjazah" style="color: red; display: none;">Nama diisi seusai ijazah!</small></td>
+		</tr>
+		<tr>
+			<td>Nama sesuai ijazah</td>
+			<td><input type="text" id="namaijazah" /></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><small id="vIdentitas" style="color: red; display: none;">Anda belum memilih identitas!</small></td>
+		</tr>
+		<tr>
+			<td>Jenis Identitas</td>
+			<td><select id="identitas" name="Pilih">
+					<option selected>--PILIH--</option>
+					<option value="Kartu Ujian">Kartu Ujian</option>
+					<option value="KTP">KTP</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><small><small style="color: gray">Pilih jenis identitas anda. Identitas harus dibawa ketika ujian/daftar ulang</small></small></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><small id="vNomorIdentitas"
+				style="color: red; display: none;">Field Ini Harus Diisi!</small></td>
+		</tr>
+		<tr>
+			<td>Nomor Identitas</td>
+			<td><input type="text" id="nomoridentitas" /></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><small id="vKewarganegaraan"
+				style="color: red; display: none;">Field Ini Harus Diisi!</small></td>
+		</tr>
+		<tr>
+			<td>Kewarganegaraan</td>
+			<td><select id="kewarganegaraan" name="Pilih">
+					<option selected>--PILIH--</option>
+					<option value="WNI">WNI</option>
+					<option value="WNA">WNA</option>
+			</select></td>
+		</tr>
+		<tr>
+		<td></td>
+		</tr>
+		<tr>
+		<td></td>
+		</tr>
+		<tr>
+		<td></td>
+		</tr>
+		<tr>
+		<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="button" onclick="validasi();"
+				id="btn-submit-reg" value="Submit" /></td>
+		</tr>
+	</table>
+</body>
+<script type="text/javascript">
+// elemen input
+	var nama = document.getElementById("nama");
+	var password = document.getElementById("password");
+	var ulangipassword = document.getElementById("ulangipassword");
+	var namaidentitas = document.getElementById("namaidentitas");
+	var namaijazah = document.getElementById("namaijazah");
+	var identitas = document.getElementById("identitas");
+	var nomoridentitas = document.getElementById("nomoridentitas");
+	var kewarganegaraan = document.getElementById("kewarganegaraan");
+	
+	// red text
+	var vNama = document.getElementById("vNama");
+	var vPassword = document.getElementById("vPassword");
+	var vUlangiPassword = document.getElementById("vUlangiPassword");
+	var vNamaIdentitas = document.getElementById("vNamaIdentitas");
+	var vNamaIjazah = document.getElementById("vNamaIjazah");
+	var vIdentitas = document.getElementById("vIdentitas");
+	var vNomorIdentitas = document.getElementById("vNomorIdentitas");
+	var vKewarganegaraan = document.getElementById("vKewarganegaraan");
+	
+	// condition
+	function validasi() {
+		if (nama.value == "") {
+			vNama.style.display = "block";
+		} else {
+			vNama.style.display = "none";
+		}
+
+		if (password.value == "") {
+			vPassword.style.display = "block";
+		} else {
+			vPassword.style.display = "none";
+		}
+
+		if (ulangipassword.value == "") {
+			vUlangiPassword.style.display = "block";
+		} else {
+			vUlangiPassword.style.display = "none";
+		}
+
+		if (namaidentitas.value == "") {
+			vNamaIdentitas.style.display = "block";
+		} else {
+			vNamaIdentitas.style.display = "none";
+		}
+		
+		if (namaijazah.value == "") {
+			vNamaIjazah.style.display = "block";
+		} else {
+			vNamaIjazah.style.display = "none";
+		}
+		
+		if (identitas.value == "--PILIH--") {
+			vIdentitas.style.display = "block";
+		} else {
+			vIdentitas.style.display = "none";
+		}
+		
+		if (nomoridentitas.value == "") {
+			vNomorIdentitas.style.display = "block";
+		} else {
+			vNomorIdentitas.style.display = "none";
+		}
+		
+		if (kewarganegaraan.value == "--PILIH--") {
+			vKewarganegaraan.style.display = "block";
+		} else {
+			vKewarganegaraan.style.display = "none";
+		}
+	}
+</script>
+</html>

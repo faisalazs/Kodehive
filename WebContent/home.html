@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        .buggy{
+            color: aquamarine;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic;
+            
+        }
+
+        .pilihanWarna {
+            color: aqua;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <p id="p1" title="Paragraf 1">Ini adalah Paragraf 1</p>
+    <div id="target"></div>
+
+    <button id="btnCss">css properties</button>
+
+    <p id="target_text">Bunglon</p>
+    <button id="addWarna">Tambah Warna</button>
+    <button id="removeWarna">Hapus Warna</button>
+
+
+
+</body>
+
+<script src="../static/jquery-3.6.0.min.js"></script>
+
+<script type="text/javascript">
+
+    function gantiWarna() {
+        $('#addWarna').click(function(){
+            $('#target_text').addClass('pilihanWarna').removeAttr("style")
+        })
+    }
+
+    function hapusWarna() {
+        $('#removeWarna').click(function(){
+            $('#target_text').removeClass('pilihanWarna').css({"background-color":"yellow","color":"#CC6D4E", "position": "fixed"})
+        })
+    }
+
+    function addText() {
+        var tampungAttribute = $('p').attr('title')
+        $('#target').text(tampungAttribute)
+    }
+
+    function JqueryAttr1() {
+        $('#p1').attr('title', 'Paragraf Baru')
+    }
+
+    function addClass() {
+        $('#p1').addClass("buggy")
+    }
+
+    function cssProperties() {
+        $('#btnCss').click(function(){
+            $('#p1').css("background-color","#007ACC")
+        })
+    }
+
+    function removeClass() {
+        $('#p1').removeClass("buggy")
+    }
+
+    $(document).ready(function () {
+        JqueryAttr1()
+        addText()
+       // addClass()
+        removeClass()
+        gantiWarna()
+        hapusWarna()
+        cssProperties()
+    });
+</script>
+
+</html>

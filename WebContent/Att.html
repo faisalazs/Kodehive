@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+        .buggy{
+            color: red;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body style="align-text:center">
+  <h1 id="t1" title="Target 1" >Target 1 Paragraph</h1>
+    <div id="target"></div>
+    
+    <input id = "addWarna" type="button"  value="Beri Warna" />
+    <input id = "deleteWarna" type="button"  value="Hapus Warna" />
+</body>
+<script src="Jquery/static/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+
+function addText() {
+    var tampungAttribute = $('p').attr('title')
+    $('#target').text(tampungAttribute)
+    }
+   function ubahwarna(){
+    	$('#addWarna').click(function(){
+    		$('#t1').addClass('buggy')
+    	});
+    }
+    
+    function hapuswarna(){
+    	$('#deleteWarna').click(function(){
+    		$('#t1').removeClass('buggy')
+    	});
+    }
+    
+    $(document).ready(function () {
+    	ubahwarna()
+        hapuswarna()
+    });
+    </script>
+</html>

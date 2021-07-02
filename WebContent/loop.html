@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h2>Loop in</h2>
+	
+	<input type="button" onclick="dataLoop();" value="Loop in" />
+	
+</body>
+
+<script type="text/javascript">
+
+	var array1 = {'K', 'O', 'D', 'E'}
+	var array2 = ['H', 'I', 'V', 'E']
+	
+	var angka = [1, 3, 5]
+	
+	console.log(array1+" "+array1.length)
+	console.log(array2+" "+array2.length)
+	console.log(array1+" "+array2)
+	
+	
+	function dataLoop() {
+		var data = {
+				id : "u01",
+				name : "Setyawan",
+				age	: 25,
+				address : "Pondik Indah"
+		}
+		
+		var item;
+		for (item in data) {
+			document.write(data[item]);
+			document.write("<br />");
+			
+		}
+	}
+	
+</script>
+
+</html>
